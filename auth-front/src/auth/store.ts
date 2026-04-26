@@ -16,7 +16,11 @@ type AuthState = {
   authStatus: boolean;
   authLoading: boolean;
   login: (loginData: LoginData) => Promise<LoginResponseData>;
+<<<<<<< HEAD
   logout: () => void;
+=======
+  logout: (silent?: boolean) => void;
+>>>>>>> e98c675f277a4f270b15eb39fb8e0f171f76b55d
   checkLogin: () => boolean | undefined;
 
   changeLocalLoginData: (
@@ -63,7 +67,11 @@ const useAuth = create<AuthState>()(
           });
         }
       },
+<<<<<<< HEAD
       logout: async () => {
+=======
+      logout: async (silent = false) => {
+>>>>>>> e98c675f277a4f270b15eb39fb8e0f171f76b55d
         try {
           //   if (!silent) {
           //     await logoutUser();
